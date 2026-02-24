@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>语联丝路 | 跨境旅游平台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="bg-layer"></div>
+    <header class="topbar">
+      <div class="logo-wrap">
+        <div class="logo-mark">语联</div>
+        <div>
+          <div class="logo-name">语联丝路</div>
+          <div class="logo-sub">SilkRoute Nexus</div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <button class="nav-link" data-scroll="#home" data-i18n="navHome"></button>
+        <button class="nav-link" data-scroll="#destinations" data-i18n="navDestinations"></button>
+        <button class="nav-link" data-scroll="#routes" data-i18n="navRoutes"></button>
+        <button class="nav-link" data-scroll="#atlas" data-i18n="navAtlas"></button>
+        <button class="nav-link" data-scroll="#ai" data-i18n="navAI"></button>
+        <button class="nav-link" data-scroll="#services" data-i18n="navServices"></button>
+        <button class="nav-link" data-scroll="#about" data-i18n="navAbout"></button>
+      </nav>
+      <div class="top-actions">
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="zh">中</button>
+          <button class="lang-btn" data-lang="vi">VI</button>
+          <button class="lang-btn" data-lang="ko">KO</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="section hero">
+        <div class="hero-main">
+          <p class="eyebrow">AI x Culture x Route</p>
+          <h1 data-i18n="heroTitle"></h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle"></p>
+          <p class="hero-desc" data-i18n="heroDesc"></p>
+          <div class="hero-cta">
+            <button class="btn btn-primary" data-scroll="#routes" data-i18n="ctaPlan"></button>
+            <button class="btn" data-scroll="#atlas" data-i18n="ctaMap"></button>
+            <button class="btn" data-scroll="#ai" data-i18n="ctaAsk"></button>
+          </div>
+        </div>
+        <div class="hero-side">
+          <label for="globalSearch" class="field-label" data-i18n="searchPlaceholder"></label>
+          <input id="globalSearch" type="text" class="search-input" />
+          <div class="search-result" id="globalSearchResult"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2 data-i18n="featuredRoutes"></h2>
+        </div>
+        <div id="featuredRoutes" class="card-grid route-grid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2 data-i18n="weeklyDestinations"></h2>
+        </div>
+        <div class="country-tabs" id="weeklyTabs"></div>
+        <div id="weeklyCards" class="card-grid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2 data-i18n="culturePicks"></h2>
+        </div>
+        <div id="culturePicks" class="card-grid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2 data-i18n="partnerNetwork"></h2>
+        </div>
+        <div id="partners" class="partner-grid"></div>
+      </section>
+
+      <section id="destinations" class="section">
+        <div class="section-head">
+          <h2 data-i18n="destinationsTitle"></h2>
+          <p data-i18n="destinationsDesc"></p>
+        </div>
+        <div class="filters">
+          <label>
+            <span data-i18n="filterCountry"></span>
+            <select id="destCountry"></select>
+          </label>
+          <label>
+            <span data-i18n="filterTheme"></span>
+            <select id="destTheme"></select>
+          </label>
+          <label>
+            <span data-i18n="filterAudience"></span>
+            <select id="destAudience"></select>
+          </label>
+        </div>
+        <p class="hint" data-i18n="mapHint"></p>
+        <div class="split-layout">
+          <div id="destinationCards" class="card-grid"></div>
+          <div class="map-panel">
+            <div class="map-canvas" id="destinationMap"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="routes" class="section">
+        <div class="section-head">
+          <h2 data-i18n="routesTitle"></h2>
+          <p data-i18n="routesDesc"></p>
+        </div>
+        <div class="split-layout">
+          <div id="routeCards" class="card-grid"></div>
+          <aside class="detail-panel" id="routeDetail"></aside>
+        </div>
+      </section>
+
+      <section id="atlas" class="section">
+        <div class="section-head">
+          <h2 data-i18n="atlasTitle"></h2>
+          <p data-i18n="atlasDesc"></p>
+        </div>
+        <div class="split-layout">
+          <div>
+            <div class="filters">
+              <label>
+                <span data-i18n="filterCountry"></span>
+                <select id="atlasCountry"></select>
+              </label>
+              <label>
+                <span data-i18n="filterTheme"></span>
+                <select id="atlasTheme"></select>
+              </label>
+              <label>
+                <span data-i18n="filterAudience"></span>
+                <select id="atlasAudience"></select>
+              </label>
+            </div>
+            <div id="atlasCards" class="card-grid"></div>
+          </div>
+          <aside class="detail-panel" id="atlasDetail"></aside>
+        </div>
+      </section>
+
+      <section id="ai" class="section">
+        <div class="section-head">
+          <h2 data-i18n="aiTitle"></h2>
+          <p data-i18n="aiDesc"></p>
+        </div>
+        <div class="ai-layout">
+          <div class="ai-chat">
+            <div id="aiMessages" class="ai-messages"></div>
+            <div class="ai-tip" data-i18n="qaTip"></div>
+          </div>
+          <div class="ai-controls">
+            <label>
+              <span data-i18n="aiMode"></span>
+              <select id="aiMode"></select>
+            </label>
+            <label>
+              <span data-i18n="aiLength"></span>
+              <select id="aiLength"></select>
+            </label>
+            <label>
+              <span data-i18n="aiDays"></span>
+              <input type="number" id="aiDays" min="1" max="20" value="5" />
+            </label>
+            <label>
+              <span data-i18n="aiFrom"></span>
+              <input type="text" id="aiFrom" placeholder="Shanghai / Hanoi / Seoul" />
+            </label>
+            <label>
+              <span data-i18n="aiPreference"></span>
+              <select id="aiPreference"></select>
+            </label>
+            <textarea id="aiInput" rows="5"></textarea>
+            <button id="aiSend" class="btn btn-primary" data-i18n="aiSend"></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="section-head">
+          <h2 data-i18n="servicesTitle"></h2>
+          <p data-i18n="servicesDesc"></p>
+        </div>
+        <div class="service-grid" id="serviceGrid"></div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-head">
+          <h2 data-i18n="aboutTitle"></h2>
+          <p data-i18n="aboutDesc"></p>
+        </div>
+        <div class="about-grid">
+          <article class="about-card">
+            <h3 data-i18n="importBlockTitle"></h3>
+            <p data-i18n="importBlockDesc"></p>
+            <a href="data/pdf-import-raw.txt" target="_blank" data-i18n="rawTextLink"></a>
+          </article>
+          <article class="about-card">
+            <h3 data-i18n="auditTitle"></h3>
+            <div id="auditBoard" class="audit-board"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" data-i18n="footer"></footer>
+
+    <script src="data/content.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
