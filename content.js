@@ -421,16 +421,16 @@ window.SILKROAD_DATA = {
       summary: {
         zh: "儒家文化共同源头与最高典范，以建筑群、碑刻与家族遗存构成完整文化景观。"
       },
-      coreHighlights: {
+      核心展品: {
         zh: "孔庙奎文阁与“万世师表”空间序列、孔府明清文书档案、孔林家族墓葬系统。"
       },
-      silkRoad: {
+      丝路相关: {
         zh: "历代朝鲜与越南使者到曲阜拜谒，形成东亚儒学交流节点；现代与成均馆、河内文庙保持互访。"
       },
-      policy: {
+     相关政策: {
         zh: "世界文化遗产，受《世界遗产公约》保护，并纳入曲阜优秀传统文化示范区建设。"
       },
-      links: [{ label: "官网", url: "http://www.qfskly.com" }]
+      官方链接: [{ label: "官网", url: "http://www.qfskly.com" }]
     },
     {
       id: "cn-qf-nishan",
